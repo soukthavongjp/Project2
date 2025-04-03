@@ -1,2 +1,2 @@
 //Project 2
-//Kristian Tokos (Yo) and Jakob Soukthavong
+//Kristian Tokos and Jakob Soukthavong
