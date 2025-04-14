@@ -1,7 +1,6 @@
 //Project 2
 //Kristian Tokos and Jakob Soukthavong
 
-
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -18,11 +17,13 @@ const char SYMBOL = '*';
 
 //Prototypes
 void OutputDivider(char symbol, int width);
-
+void RemoveDuplicates(const string& inputFileName);
 
 int main(void)
 {
+	string inputFileName = "test.txt";
 
+	RemoveDuplicates(inputFileName);
 
 	return 0;
 }
@@ -38,3 +39,49 @@ void OutputDivider(char symbol, int width)
 		<< setfill(' ') << endl;
 }
 
+/******************************************************************************
+Function #2
+RemoveDuplicates: This function will remove the duplicate words from an input
+text file.
+******************************************************************************/
+void RemoveDuplicates(const string& inputFileName)
+{
+	ifstream inFile;
+
+	set<string> foundWords;
+	string line;
+	string word;
+
+	inFile.open(inputFileName);
+
+	if (!inFile)
+	{
+		cout << "Error: Could not open input file." << endl;
+		return;
+	}
+
+	while (getline(inFile, line))
+	{
+		istringstream iss(line);
+
+		while (iss >> word)
+		{
+			word.erase(remove_if(word.begin(), word.end(), ispunct), word.end());
+
+			transform(word.begin(), word.end(), word.begin(), ::tolower);
+
+			foundWords.insert(word);
+
+		}
+	}
+
+	for (const auto& w : foundWords)
+	{
+		cout << w << endl;
+	}
+
+	inFile.close();
+
+	cout << endl << "Duplicate words have been removed and these are the results. " << endl;
+
+}
