@@ -30,18 +30,18 @@ int main(void)
     //system("pause");
 
     // ----- Test Driver for findImmediateTransformations function -----
-    // Example dictionary
-    unordered_set<string> dictionary = { "land", "lens", "pend", "send", "tend", "fend", "bend", "rend", "pane", "pens", "pans", "pare" };
-
-    string word = "lend";
-    vector<string> transformations = findImmediateTransformations(word, dictionary);
-
-    cout << "Immediate transformations for \"" << word << "\":" << endl;
-    for (const string& w : transformations) {
-        cout << w << endl;
-    }
-
-    system("pause");
+    //// Example dictionary
+    //unordered_set<string> dictionary = { "land", "lens", "pend", "send", "tend", "fend", "bend", "rend", "pane", "pens", "pans", "pare" };
+    //
+    //string word = "lend";
+    //vector<string> transformations = findImmediateTransformations(word, dictionary);
+    //
+    //cout << "Immediate transformations for \"" << word << "\":" << endl;
+    //for (const string& w : transformations) {
+    //    cout << w << endl;
+    //}
+    //
+    //system("pause");
 
     return 0;
 }
