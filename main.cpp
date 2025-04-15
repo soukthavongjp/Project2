@@ -9,8 +9,11 @@
 
 using namespace std;
 
-// Function Definitions
+// ----- Function Definitions -----
+
 vector<string> findImmediateTransformations(const string& word, const unordered_set<string>& dictionary);
+
+// ----- Main Function -----
 
 int main(void)
 {
@@ -42,6 +45,8 @@ int main(void)
 
     return 0;
 }
+
+// ----- Function Bodies -----
 
 vector<string> findImmediateTransformations(const string& word, const unordered_set<string>& dictionary)
 {
