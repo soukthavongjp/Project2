@@ -37,25 +37,25 @@ int main(void)
     // ----- Test Driver for findImmediateTransformations & loadDictionary functions -----
     // Example dictionary
     //unordered_set<string> dictionary = { "land", "lens", "pend", "send", "tend", "fend", "bend", "rend", "pane", "pens", "pans", "pare" };
-    
-    string filename = "dictionary345.txt"; // Input file name
-    string initialWord = "lend"; // The word to start with
+    //
+    //string filename = "dictionary345.txt"; // Input file name
+    //string initialWord = "lend"; // The word to start with
 
-    unordered_set<string> dictionary = loadDictionary(filename, initialWord.length());
+    //unordered_set<string> dictionary = loadDictionary(filename, initialWord.length());
 
-    if (dictionary.empty()) {
-        cerr << "Error: Dictionary is empty or file not found!" << endl;
-        return 1;
-    }
+    //if (dictionary.empty()) {
+    //    cerr << "Error: Dictionary is empty or file not found!" << endl;
+    //    return 1;
+    //}
 
-    vector<string> transformations = findImmediateTransformations(initialWord, dictionary);
+    //vector<string> transformations = findImmediateTransformations(initialWord, dictionary);
 
-    std::cout << "Immediate transformations for \"" << initialWord << "\":" << std::endl;
-    for (const string& w : transformations) {
-        cout << w << endl;
-    }
-    
-    system("pause");
+    //std::cout << "Immediate transformations for \"" << initialWord << "\":" << std::endl;
+    //for (const string& w : transformations) {
+    //    cout << w << endl;
+    //}
+    //
+    //system("pause");
 
     return 0;
 }
