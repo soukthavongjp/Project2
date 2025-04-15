@@ -40,16 +40,16 @@ int main(void)
     //
     //string filename = "dictionary345.txt"; // Input file name
     //string initialWord = "lend"; // The word to start with
-
+    //
     //unordered_set<string> dictionary = loadDictionary(filename, initialWord.length());
-
+    //
     //if (dictionary.empty()) {
     //    cerr << "Error: Dictionary is empty or file not found!" << endl;
     //    return 1;
     //}
-
+    //
     //vector<string> transformations = findImmediateTransformations(initialWord, dictionary);
-
+    //
     //std::cout << "Immediate transformations for \"" << initialWord << "\":" << std::endl;
     //for (const string& w : transformations) {
     //    cout << w << endl;
