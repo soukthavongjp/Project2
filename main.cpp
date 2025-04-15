@@ -5,12 +5,17 @@
 #include <vector>
 #include <string>
 #include <unordered_set>
+#include <fstream>
 #include "RadixSort.h"
 
 using namespace std;
 
 // ----- Function Definitions -----
 
+// Function to load dictionary from a file, filtering by word length
+unordered_set<string> loadDictionary(const string& filename, size_t wordLength);
+
+// Function to find immediate transformations
 vector<string> findImmediateTransformations(const string& word, const unordered_set<string>& dictionary);
 
 // ----- Main Function -----
@@ -29,24 +34,55 @@ int main(void)
     //}
     //system("pause");
 
-    // ----- Test Driver for findImmediateTransformations function -----
-    //// Example dictionary
+    // ----- Test Driver for findImmediateTransformations & loadDictionary functions -----
+    // Example dictionary
     //unordered_set<string> dictionary = { "land", "lens", "pend", "send", "tend", "fend", "bend", "rend", "pane", "pens", "pans", "pare" };
-    //
-    //string word = "lend";
-    //vector<string> transformations = findImmediateTransformations(word, dictionary);
-    //
-    //cout << "Immediate transformations for \"" << word << "\":" << endl;
-    //for (const string& w : transformations) {
-    //    cout << w << endl;
-    //}
-    //
-    //system("pause");
+    
+    string filename = "dictionary345.txt"; // Input file name
+    string initialWord = "lend"; // The word to start with
+
+    unordered_set<string> dictionary = loadDictionary(filename, initialWord.length());
+
+    if (dictionary.empty()) {
+        cerr << "Error: Dictionary is empty or file not found!" << endl;
+        return 1;
+    }
+
+    vector<string> transformations = findImmediateTransformations(initialWord, dictionary);
+
+    std::cout << "Immediate transformations for \"" << initialWord << "\":" << std::endl;
+    for (const string& w : transformations) {
+        cout << w << endl;
+    }
+    
+    system("pause");
 
     return 0;
 }
 
 // ----- Function Bodies -----
+
+unordered_set<string> loadDictionary(const string& filename, size_t wordLength)
+{
+    unordered_set<string> dictionary;
+    ifstream file(filename);
+
+    if (!file.is_open()) {
+        cerr << "Error: Unable to open file " << filename << endl;
+        return dictionary;
+    }
+
+    string word;
+    while (file >> word) {
+        if (word.length() == wordLength) { // Check if the word length matches the target length
+            transform(word.begin(), word.end(), word.begin(), ::tolower); // Convert to lowercase
+            dictionary.insert(word);
+        }
+    }
+
+    file.close();
+    return dictionary;
+}
 
 vector<string> findImmediateTransformations(const string& word, const unordered_set<string>& dictionary)
 {
