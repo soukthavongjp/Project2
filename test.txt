@@ -8,3 +8,8 @@ bag
 them
 ball
 tee
+jump
+jam
+jump
+jump
+clip
