@@ -75,7 +75,7 @@ void RemoveDuplicates(const string& inputFileName)
 }
 
 /******************************************************************************
-//Function #3
+//Function #3 Made by Jakob Soukthavong
 isOneLetterDifferent: This is helper function that checks if two words are different
 by one letter.
 ******************************************************************************/
@@ -95,7 +95,7 @@ bool isOneLetterDifferent(const string& a, const string& b)
 }
 
 /******************************************************************************
-//Function #4
+//Function #4 Made by Jakob Soukthavong
 loadWordsFromFile: This function is used to read the words from the input file
 and store them in a list.
 ******************************************************************************/
@@ -123,7 +123,7 @@ vector<string> loadWordsFromFile(const string& filename)
 }
 
 /******************************************************************************
-//Function #5
+//Function #5 Made by Jakob Soukthavong
 findTransformationPath: This function uses breadth first search to find the 
 transformations between the starting word and the target word while avoiding
 cycles.
