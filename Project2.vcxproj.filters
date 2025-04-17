@@ -18,11 +18,16 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+
     <ClCompile Include="RadixSort.cpp">
+=======
+    <ClCompile Include="Functions.cpp">
+
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+
     <ClInclude Include="RadixSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -31,5 +36,18 @@
     <Text Include="dictionary345.txt">
       <Filter>Source Files</Filter>
     </Text>
+
+    <Text Include="dictionary345.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="test.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+
   </ItemGroup>
 </Project>
