@@ -118,9 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="dictionary345.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="dictionary345.txt" />
     <Text Include="test.txt" />
   </ItemGroup>
   <ItemGroup>

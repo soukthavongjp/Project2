@@ -79,7 +79,7 @@ int main(void)
 
 	//--------------------------------------------------------------------------------------------------
   
-  // ----- Test Driver for RadixSort -----
+  // ----- Test Driver for RadixSort (By Kristian Tokos) -----------------------------------------------
   //RadixSort sorter; // Create an instance of RadixSort
   //std::vector<std::string> strings = { "banana", "apple", "kiwi", "orange", "grape" }; // Input strings
   //sorter.sort(strings); // Sort the strings using radix sort
@@ -91,10 +91,10 @@ int main(void)
   //}
   //system("pause");
 
-  // ----- Test Driver for findImmediateTransformations & loadDictionary functions -----
-  // Example dictionary
-  //unordered_set<string> dictionary = { "land", "lens", "pend", "send", "tend", "fend", "bend", "rend", "pane", "pens", "pans", "pare" };
-  //
+  //----------------------------------------------------------------------------------------------------
+
+  // ----- Test Driver for findImmediateTransformations & loadDictionary functions ---------------------
+ 
   //string filename = "dictionary345.txt"; // Input file name
   //string initialWord = "lend"; // The word to start with
   //
@@ -114,6 +114,7 @@ int main(void)
   //
   //system("pause");
 
+  // ---------------------------------------------------------------------------------------------------
 
 	return 0;
 }
