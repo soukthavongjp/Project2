@@ -93,7 +93,7 @@ int main(void)
 
   //----------------------------------------------------------------------------------------------------
 
-  // ----- Test Driver for findImmediateTransformations & loadDictionary functions ---------------------
+  // ----- Test Driver for findImmediateTransformations & loadDictionary functions (By Kristian Tokos) ---------------------
  
   //string filename = "dictionary345.txt"; // Input file name
   //string initialWord = "lend"; // The word to start with
