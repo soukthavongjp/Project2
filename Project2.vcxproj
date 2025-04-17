@@ -111,6 +111,13 @@
   <ItemGroup>
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RadixSort.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RadixSort.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="dictionary345.txt" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="dictionary345.txt" />
